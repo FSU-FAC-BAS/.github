@@ -1,0 +1,77 @@
+name: Documentation Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  docs-check:
+    name: Verify Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check required documentation files
+        run: |
+          REQUIRED_FILES=(
+            "README.md"
+            "CONTRIBUTING.md"
+            "docs/architecture.md"
+            "docs/setup.md"
+            "docs/usage.md"
+            "docs/CHANGELOG.md"
+          )
+
+          MISSING=()
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              MISSING+=("$file")
+            fi
+          done
+
+          IS_MAIN="${{ github.ref == 'refs/heads/main' || github.base_ref == 'main' }}"
+
+          if [ ${#MISSING[@]} -gt 0 ]; then
+            echo ""
+            echo "=========================================="
+            echo "  Missing Documentation Files"
+            echo "=========================================="
+            for file in "${MISSING[@]}"; do
+              echo "  - $file"
+            done
+            echo "=========================================="
+            echo ""
+
+            if [ "$IS_MAIN" = "true" ]; then
+              echo "::error::Documentation check failed. ${#MISSING[@]} required file(s) missing."
+              exit 1
+            else
+              for file in "${MISSING[@]}"; do
+                echo "::warning::Missing documentation file: $file"
+              done
+              echo "Documentation check passed with warnings (non-main branch)."
+            fi
+          else
+            echo "All required documentation files present."
+          fi
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: |
+            README.md
+            CONTRIBUTING.md
+            docs/*.md
+          config: |
+            {
+              "line-length": false,
+              "no-inline-html": false,
+              "no-duplicate-heading": false,
+              "first-line-heading": false,
+              "no-trailing-spaces": true,
+              "no-multiple-blanks": true
+            }
+        continue-on-error: true

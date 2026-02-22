@@ -1,0 +1,6 @@
+{
+  "name": "Documentation Check",
+  "description": "Enforces standardized documentation structure across SmartFDD repos. Hard blocks on main, soft warns on other branches.",
+  "iconName": "octicon book",
+  "categories": ["Documentation"]
+}
