@@ -15,7 +15,7 @@ name: claude_bot — repo README
 #         contents: write
 #         pull-requests: write
 #
-# Needs org secrets FSU_AI_API_KEY and SKILLS_REPO_TOKEN, and the org setting
+# Needs the org secret FSU_AI_API_KEY and the org setting
 # "Allow GitHub Actions to create and approve pull requests".
 
 on:
@@ -31,10 +31,10 @@ on:
       model:
         type: string
         default: ""
-      skills_ref:
-        description: fsu-ai-dev-skills ref to run
+      bot_ref:
+        description: FSU-FAC-BAS/.github ref to load claude-bot scripts from
         type: string
-        default: master
+        default: main
 
 jobs:
   readme:
@@ -47,14 +47,14 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      # This repo is public, so no token is needed to fetch the bot scripts.
       - uses: actions/checkout@v4
         with:
-          repository: FSU-FAC-BAS/fsu-ai-dev-skills
-          ref: ${{ inputs.skills_ref }}
-          path: tools/fsu-ai-dev-skills
-          token: ${{ secrets.SKILLS_REPO_TOKEN }}
+          repository: FSU-FAC-BAS/.github
+          ref: ${{ inputs.bot_ref }}
+          path: .claude-bot
           persist-credentials: false
-      - run: python3 tools/fsu-ai-dev-skills/ci/readme-bot/repo_readme.py
+      - run: python3 .claude-bot/claude-bot/repo_readme.py
         env:
           GH_TOKEN: ${{ github.token }}
           BEFORE: ${{ github.event.before }}
