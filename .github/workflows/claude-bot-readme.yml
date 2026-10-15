@@ -1,0 +1,64 @@
+name: claude_bot — repo README
+
+# Reusable workflow: after a push, asks Claude (FSU AI gateway) whether the
+# repo's README is now out of date and, if so, opens or refreshes a PR with
+# the fix. Call it from any FSU-FAC-BAS repo:
+#
+#   on:
+#     push:
+#       branches: [main]
+#   jobs:
+#     readme:
+#       uses: FSU-FAC-BAS/.github/.github/workflows/claude-bot-readme.yml@main
+#       secrets: inherit
+#       permissions:
+#         contents: write
+#         pull-requests: write
+#
+# Needs the org secret FSU_AI_API_KEY and the org setting
+# "Allow GitHub Actions to create and approve pull requests".
+
+on:
+  workflow_call:
+    inputs:
+      runner:
+        description: Runner labels as JSON (must be inside the FSU network)
+        type: string
+        default: '["self-hosted"]'
+      readme_path:
+        type: string
+        default: README.md
+      model:
+        type: string
+        default: ""
+      bot_ref:
+        description: FSU-FAC-BAS/.github ref to load claude-bot scripts from
+        type: string
+        default: main
+
+jobs:
+  readme:
+    if: github.event_name == 'push' && github.actor != 'claude_bot'
+    runs-on: ${{ fromJSON(inputs.runner) }}
+    concurrency:
+      group: claude-bot-readme-${{ github.repository }}-${{ github.ref_name }}
+      cancel-in-progress: true
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      # This repo is public, so no token is needed to fetch the bot scripts.
+      - uses: actions/checkout@v4
+        with:
+          repository: FSU-FAC-BAS/.github
+          ref: ${{ inputs.bot_ref }}
+          path: .claude-bot
+          persist-credentials: false
+      - run: python3 .claude-bot/claude-bot/repo_readme.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
+          README_PATH: ${{ inputs.readme_path }}
+          README_BOT_MODEL: ${{ inputs.model }}
+          FSU_AI_API_KEY: ${{ secrets.FSU_AI_API_KEY }}
