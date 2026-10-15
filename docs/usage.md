@@ -51,7 +51,7 @@ Safety rules:
 
 One-time org setup (admin):
 
-1. Org secrets `FSU_AI_API_KEY` and `ORG_READ_TOKEN`, with repository access
+1. Org secrets `FSU_AI_API_KEY` and `ORG_READER` (passed as `ORG_READ_TOKEN`), with repository access
    that includes `.github` (public repos are often left out by default).
 2. Org variable `README_BOT_RUNNER` with the FSU runner labels as JSON, for
    example `["self-hosted","fsu"]` (default `["self-hosted"]`).

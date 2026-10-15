@@ -4,7 +4,7 @@ name: claude_bot — org README
 # change as a PR. Runs on a self-hosted runner inside the FSU network because
 # the FSU AI gateway is not reachable from GitHub-hosted runners.
 #
-# Needs org secrets FSU_AI_API_KEY and ORG_READ_TOKEN (Metadata: read on all
+# Needs org secrets FSU_AI_API_KEY and ORG_READER (Metadata: read on all
 # org repos), both shared with this repo.
 # Set the org/repo variable README_BOT_RUNNER to the runner labels as JSON,
 # e.g. ["self-hosted","fsu"]; it defaults to ["self-hosted"].
@@ -31,7 +31,7 @@ jobs:
       - run: python3 claude-bot/org_readme.py
         env:
           GH_TOKEN: ${{ github.token }}
-          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          ORG_READ_TOKEN: ${{ secrets.ORG_READER }}
           FSU_AI_API_KEY: ${{ secrets.FSU_AI_API_KEY }}
           README_BOT_ORG: ${{ github.repository_owner }}
           PROFILE_REPO: ${{ github.repository }}
