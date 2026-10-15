@@ -1,0 +1,64 @@
+name: claude_bot — repo README
+
+# Reusable workflow: after a push, asks Claude (FSU AI gateway) whether the
+# repo's README is now out of date and, if so, opens or refreshes a PR with
+# the fix. Call it from any FSU-FAC-BAS repo:
+#
+#   on:
+#     push:
+#       branches: [main]
+#   jobs:
+#     readme:
+#       uses: FSU-FAC-BAS/.github/.github/workflows/claude-bot-readme.yml@main
+#       secrets: inherit
+#       permissions:
+#         contents: write
+#         pull-requests: write
+#
+# Needs org secrets FSU_AI_API_KEY and SKILLS_REPO_TOKEN, and the org setting
+# "Allow GitHub Actions to create and approve pull requests".
+
+on:
+  workflow_call:
+    inputs:
+      runner:
+        description: Runner labels as JSON (must be inside the FSU network)
+        type: string
+        default: '["self-hosted"]'
+      readme_path:
+        type: string
+        default: README.md
+      model:
+        type: string
+        default: ""
+      skills_ref:
+        description: fsu-ai-dev-skills ref to run
+        type: string
+        default: master
+
+jobs:
+  readme:
+    if: github.event_name == 'push' && github.actor != 'claude_bot'
+    runs-on: ${{ fromJSON(inputs.runner) }}
+    concurrency:
+      group: claude-bot-readme-${{ github.repository }}-${{ github.ref_name }}
+      cancel-in-progress: true
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: FSU-FAC-BAS/fsu-ai-dev-skills
+          ref: ${{ inputs.skills_ref }}
+          path: tools/fsu-ai-dev-skills
+          token: ${{ secrets.SKILLS_REPO_TOKEN }}
+          persist-credentials: false
+      - run: python3 tools/fsu-ai-dev-skills/ci/readme-bot/repo_readme.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
+          README_PATH: ${{ inputs.readme_path }}
+          README_BOT_MODEL: ${{ inputs.model }}
+          FSU_AI_API_KEY: ${{ secrets.FSU_AI_API_KEY }}
