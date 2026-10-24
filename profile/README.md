@@ -1,10 +1,84 @@
+<div align="center">
+  <a href="https://github.com/FSU-FAC-BAS">
+    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/banner.svg" alt="FSU Facilities — Building Automation Systems · SmartFDD" width="100%">
+  </a>
+</div>
+
+<br>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/fsu-facilities-logo.png" alt="FSU Facilities" width="400">
+  <a href="#our-repositories"><img src="https://img.shields.io/badge/Repositories-37-782F40?style=for-the-badge&labelColor=CEB888" alt="37 repositories"></a>&nbsp;
+  <img src="https://img.shields.io/badge/-Python-782F40?style=for-the-badge&labelColor=CEB888&logo=python&logoColor=1A1A1A" alt="Python">&nbsp;
+  <img src="https://img.shields.io/badge/-TypeScript-782F40?style=for-the-badge&labelColor=CEB888&logo=typescript&logoColor=1A1A1A" alt="TypeScript">&nbsp;
+  <a href="https://www.fsu.edu"><img src="https://img.shields.io/badge/Florida%20State%20University-Facilities-782F40?style=for-the-badge&labelColor=CEB888" alt="Florida State University · Facilities"></a>
 </p>
 
-# SmartFDD
+<p align="center">
+  <img src="https://img.shields.io/badge/BACnet-1A1A1A?style=flat-square&logoColor=CEB888" alt="BACnet">
+  <img src="https://img.shields.io/badge/Siemens%20Desigo-1A1A1A?style=flat-square&logo=siemens&logoColor=CEB888" alt="Siemens Desigo">
+  <img src="https://img.shields.io/badge/FastAPI-1A1A1A?style=flat-square&logo=fastapi&logoColor=CEB888" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Next.js-1A1A1A?style=flat-square&logo=nextdotjs&logoColor=CEB888" alt="Next.js">
+  <img src="https://img.shields.io/badge/PostgreSQL-1A1A1A?style=flat-square&logo=postgresql&logoColor=CEB888" alt="PostgreSQL">
+</p>
 
-**Smart Fault Detection & Diagnostics** — Building automation intelligence for FSU Facilities.
+<h3 align="center">Smart Fault Detection &amp; Diagnostics for the Florida State University campus</h3>
+
+<p align="center">
+  <a href="#our-repositories">Repositories</a>
+  &nbsp;·&nbsp;
+  <a href="#-documentation-standards">Documentation Standards</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/FSU-FAC-BAS/onboarding">Onboarding</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/FSU-FAC-BAS/.github/blob/main/CONTRIBUTING.md">Contributing</a>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td width="58%" valign="top">
+      <h3>🎯 Mission</h3>
+      <p>
+        We write the software that keeps Florida State University's buildings healthy.
+        <b>SmartFDD</b> connects the campus BACnet network, Siemens Desigo, and AiM work orders
+        into a single intelligence layer so faults are caught early, energy is not wasted,
+        and every space stays comfortable.
+      </p>
+      <p><b>What we build</b></p>
+      <ul>
+        <li>🔌 <b>Device discovery &amp; inventory</b> — BACnet networks mapped, validated, and catalogued in PostgreSQL</li>
+        <li>🧠 <b>Fault detection &amp; diagnostics</b> — rule engines, AHU knowledge assistants, and anomaly detection on building telemetry</li>
+        <li>⚡ <b>Energy &amp; utility insights</b> — campus utility dashboards, sustainability analytics, and Power BI reporting</li>
+        <li>🔔 <b>Notifications &amp; workflow</b> — alerts routed to email, Slack, Teams, and AiM work orders</li>
+      </ul>
+    </td>
+    <td width="42%" valign="top">
+      <h3>📊 At a Glance</h3>
+      <table>
+        <tr><td align="center">📦</td><td><b>37</b> repositories · <b>32</b> active · <b>5</b> archived</td></tr>
+        <tr><td align="center">🗂️</td><td><b>6</b> categories, from core services to onboarding</td></tr>
+        <tr><td align="center">🐍</td><td>Python &amp; FastAPI services</td></tr>
+        <tr><td align="center">⚛️</td><td>TypeScript &amp; Next.js frontends</td></tr>
+        <tr><td align="center">🏢</td><td>BACnet · Siemens Desigo · AiM</td></tr>
+        <tr><td align="center">🤖</td><td>Catalog kept current by <code>claude_bot</code></td></tr>
+      </table>
+      <h3>🚀 Start Here</h3>
+      <ul>
+        <li><a href="https://github.com/FSU-FAC-BAS/onboarding">onboarding</a> — getting started documents</li>
+        <li><a href="https://github.com/FSU-FAC-BAS/fdd-common">fdd-common</a> — shared AiM, Desigo &amp; BAS data access</li>
+        <li><a href="https://github.com/FSU-FAC-BAS/BAS-TOOL-X">BAS-TOOL-X</a> — device discovery &amp; inventory</li>
+        <li><a href="https://github.com/FSU-FAC-BAS/Facilities-BAS-Website">Facilities-BAS-Website</a> — FDD monitoring dashboard</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+</p>
 
 <!-- claude_bot:repos:start -->
 ## Our Repositories
@@ -83,20 +157,65 @@
 
 <!-- claude_bot:repos:end -->
 
-## Documentation Standards
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+</p>
 
-Every repository follows a standardized documentation structure:
+## 📁 Documentation Standards
 
-```
+Every repository ships the same documentation skeleton, enforced in CI by the reusable
+[`docs-check`](https://github.com/FSU-FAC-BAS/.github/tree/main/.github/workflows) workflow.
+Templates for each file live in [this repository](https://github.com/FSU-FAC-BAS/.github).
+
+<table align="center" width="100%">
+  <tr>
+    <td width="44%" valign="top">
+      <h4>🌲 Layout</h4>
+<pre>
 repo/
-  README.md              # Project overview
-  CONTRIBUTING.md        # How to contribute
-  docs/
-    architecture.md      # System design
-    setup.md             # Installation guide
-    usage.md             # Usage guide
-    CHANGELOG.md         # Version history
-  .github/
-    workflows/
-      docs-check.yml     # CI enforcement
-```
+├── README.md
+├── CONTRIBUTING.md
+├── docs/
+│   ├── architecture.md
+│   ├── setup.md
+│   ├── usage.md
+│   └── CHANGELOG.md
+└── .github/
+    └── workflows/
+        └── docs-check.yml
+</pre>
+    </td>
+    <td width="56%" valign="top">
+      <h4>🧭 What each file is for</h4>
+      <table>
+        <tr><th align="left">File</th><th align="left">Purpose</th></tr>
+        <tr><td>📘 <code>README.md</code></td><td>Project overview — what it is and why it exists</td></tr>
+        <tr><td>🤝 <code>CONTRIBUTING.md</code></td><td>How to contribute, branch, and open a PR</td></tr>
+        <tr><td>🏗️ <code>docs/architecture.md</code></td><td>System design and component boundaries</td></tr>
+        <tr><td>⚙️ <code>docs/setup.md</code></td><td>Installation and local environment guide</td></tr>
+        <tr><td>📖 <code>docs/usage.md</code></td><td>How to run and operate the project</td></tr>
+        <tr><td>🗓️ <code>docs/CHANGELOG.md</code></td><td>Version history</td></tr>
+        <tr><td>✅ <code>docs-check.yml</code></td><td>CI enforcement of this structure</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  <br><br>
+  <a href="https://github.com/FSU-FAC-BAS">
+    <img src="https://img.shields.io/badge/FSU-FACILITIES-CEB888?style=for-the-badge&labelColor=782F40" alt="FSU Facilities">
+  </a>
+  <br><br>
+  <sub>© 2026 Florida State University · Facilities · Building Automation Systems · Tallahassee, FL</sub>
+  <br><br>
+  <img src="https://img.shields.io/badge/maintained%20by-claude__bot-782F40?style=flat-square&labelColor=CEB888" alt="maintained by claude_bot">
+  <img src="https://img.shields.io/badge/catalog-auto--updated-782F40?style=flat-square&labelColor=CEB888" alt="catalog auto-updated">
+  <br><br>
+  <a href="https://github.com/Stranzersweb"><img src="https://img.shields.io/badge/crafted%20by-Aditya%20Sugandhi-782F40?style=flat-square&labelColor=0D1117" alt="crafted by Aditya Sugandhi"></a>
+</div>
+
+<!-- Crafted by Aditya Sugandhi -->
