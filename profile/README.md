@@ -1,6 +1,10 @@
 <div align="center">
   <a href="https://github.com/FSU-FAC-BAS">
-    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/banner.svg" alt="FSU Facilities — Building Automation Systems · SmartFDD" width="100%">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/banner.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/banner-light.svg">
+      <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/banner.svg" alt="FSU Facilities — Building Automation Systems · SmartFDD" width="100%">
+    </picture>
   </a>
 </div>
 
@@ -33,9 +37,13 @@
   <a href="https://github.com/FSU-FAC-BAS/.github/blob/main/CONTRIBUTING.md">Contributing</a>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider-light.svg">
+    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  </picture>
+</div>
 
 <table align="center" width="100%">
   <tr>
@@ -76,9 +84,13 @@
   </tr>
 </table>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider-light.svg">
+    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  </picture>
+</div>
 
 <!-- claude_bot:repos:start -->
 ## Our Repositories
@@ -157,9 +169,13 @@
 
 <!-- claude_bot:repos:end -->
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider-light.svg">
+    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  </picture>
+</div>
 
 ## 📁 Documentation Standards
 
@@ -204,7 +220,11 @@ repo/
 <br>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider-light.svg">
+    <img src="https://raw.githubusercontent.com/FSU-FAC-BAS/.github/main/docs/assets/divider.svg" alt="" width="100%">
+  </picture>
   <br><br>
   <a href="https://github.com/FSU-FAC-BAS">
     <img src="https://img.shields.io/badge/FSU-FACILITIES-CEB888?style=for-the-badge&labelColor=782F40" alt="FSU Facilities">
