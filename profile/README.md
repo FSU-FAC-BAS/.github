@@ -100,6 +100,7 @@
 | Repository | Description |
 |------------|-------------|
 | [BacnetServices](https://github.com/FSU-FAC-BAS/BacnetServices) | BACnet Services API based on bacpypes 3 |
+| [bas-sentinel-si](https://github.com/FSU-FAC-BAS/bas-sentinel-si) | Monitors BAS container logs, files GitHub issues, and drafts fixes |
 | [BAS-TOOL-X](https://github.com/FSU-FAC-BAS/BAS-TOOL-X) | BACnet device discovery, validation, and inventory in PostgreSQL |
 | [connection-service](https://github.com/FSU-FAC-BAS/connection-service) | Connection management service |
 | [fdd-common](https://github.com/FSU-FAC-BAS/fdd-common) | Wrapper package for AiM, Desigo, and BAS databases |
@@ -112,6 +113,7 @@
 |------------|-------------|
 | [bas-panel-monitoring](https://github.com/FSU-FAC-BAS/bas-panel-monitoring) | BAS Facilities Manager for energy & workorder management |
 | [BAS-TOOL-X-console](https://github.com/FSU-FAC-BAS/BAS-TOOL-X-console) | Next.js frontend for BAS-TOOL-X device exploration |
+| [BTX-ASSISTANT](https://github.com/FSU-FAC-BAS/BTX-ASSISTANT) | FSU-themed Open WebUI chat interface for BAS staff |
 | [BuildingElevationDashboard](https://github.com/FSU-FAC-BAS/BuildingElevationDashboard) | Building elevation dashboard |
 | [BuildingsWatersHead](https://github.com/FSU-FAC-BAS/BuildingsWatersHead) | Campus water head explorer with hydraulic network model |
 | [ClimateNexus](https://github.com/FSU-FAC-BAS/ClimateNexus) | Climate data visualization |
@@ -165,7 +167,6 @@
 | [bluemonkey](https://github.com/FSU-FAC-BAS/bluemonkey) | FDD API |
 | [desigo](https://github.com/FSU-FAC-BAS/desigo) | Desigo wrapper in Python |
 | [FSU-Desigo-AiM](https://github.com/FSU-FAC-BAS/FSU-Desigo-AiM) | Desigo-AiM API integration |
-| [smartfdd](https://github.com/FSU-FAC-BAS/smartfdd) | Official SmartFDD app |
 
 <!-- claude_bot:repos:end -->
 
