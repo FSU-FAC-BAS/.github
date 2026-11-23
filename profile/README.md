@@ -124,7 +124,6 @@
 | [bas-automations](https://github.com/FSU-FAC-BAS/bas-automations) | BAS ETL automation scripts |
 | [fdd-scripting](https://github.com/FSU-FAC-BAS/fdd-scripting) | FDD scripting utilities |
 | [fsu-ai-dev-skills](https://github.com/FSU-FAC-BAS/fsu-ai-dev-skills) | Claude Code skills and proxies for the FSU AI gateway |
-| [PPCL-Script-Generation](https://github.com/FSU-FAC-BAS/PPCL-Script-Generation) | Automated PPCL code generation |
 | [siemens_tools](https://github.com/FSU-FAC-BAS/siemens_tools) | Siemens integration tools |
 | [UpgradeScripts](https://github.com/FSU-FAC-BAS/UpgradeScripts) | Version development tool updaters |
 
@@ -157,6 +156,13 @@
 | [FSU](https://github.com/FSU-FAC-BAS/FSU) | FSU resources |
 | [onboarding](https://github.com/FSU-FAC-BAS/onboarding) | BAS Team getting started documents |
 
+### Other
+
+| Repository | Description |
+|------------|-------------|
+| [bas-sentinel-si](https://github.com/FSU-FAC-BAS/bas-sentinel-si) | Self-improving AI sentinel for FSU building automation — watches every BAS service, diagnoses failures, drafts fixes, and learns from every review. |
+| [BTX-ASSISTANT](https://github.com/FSU-FAC-BAS/BTX-ASSISTANT) | BTX Assistant — FSU Facilities BAS chat interface (FSU garnet & gold), built on Open WebUI |
+
 ### Archived
 
 | Repository | Description |
@@ -165,7 +171,7 @@
 | [bluemonkey](https://github.com/FSU-FAC-BAS/bluemonkey) | FDD API |
 | [desigo](https://github.com/FSU-FAC-BAS/desigo) | Desigo wrapper in Python |
 | [FSU-Desigo-AiM](https://github.com/FSU-FAC-BAS/FSU-Desigo-AiM) | Desigo-AiM API integration |
-| [smartfdd](https://github.com/FSU-FAC-BAS/smartfdd) | Official SmartFDD app |
+| [PPCL-Script-Generation](https://github.com/FSU-FAC-BAS/PPCL-Script-Generation) | Automated PPCL code generation |
 
 <!-- claude_bot:repos:end -->
 
